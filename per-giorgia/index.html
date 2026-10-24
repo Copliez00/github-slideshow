@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Un video riservato a Giorgia Ponti.">
+<meta property="og:title" content="Per Giorgia">
+<meta property="og:description" content="Un video riservato a Giorgia Ponti.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://copliez00.github.io/github-slideshow/per-giorgia/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0e16">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Per Giorgia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Jost:wght@300..500&display=swap">
+<style>
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  [hidden] { display: none !important; }
+  /* Layout: one narrow left-aligned column, vertically centred, lit from the top like a street lamp at blue hour; the film replaces it once unlocked. */
+  :root {
+    --ink: #0b0e16;
+    --night: #121826;
+    --line: #273044;
+    --paper: #ece5d8;
+    --mist: #8e95a6;
+    --lamp: #e0b06a;
+    --wrong: #e08a7a;
+    --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+    --body: "Jost", "Futura", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    color-scheme: dark;
+  }
+  html { height: 100%; }
+  body {
+    min-height: 100%;
+    margin: 0;
+    background:
+      radial-gradient(ellipse 70% 45% at 18% -8%, rgba(224, 176, 106, 0.16), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 100% 110%, rgba(70, 96, 150, 0.14), transparent 70%),
+      var(--ink);
+    background-attachment: fixed;
+    color: var(--paper);
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    display: grid;
+    place-items: center;
+    padding-block: 3rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+
+  .gate {
+    width: 100%;
+    max-width: 34rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+  .head { display: flex; flex-direction: column; gap: 0.75rem; }
+  .eyebrow {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lamp);
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 9vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .lede { margin: 0.5rem 0 0; color: var(--paper); max-width: 30rem; }
+
+  .rule { height: 1px; border: 0; margin: 0; background: linear-gradient(90deg, var(--lamp), var(--line) 30%, transparent); opacity: 0.7; }
+
+  .riddle { display: flex; flex-direction: column; gap: 1.25rem; }
+  .label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mist);
+  }
+  blockquote {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.3rem, 4.4vw, 1.6rem);
+    line-height: 1.4;
+    text-wrap: pretty;
+  }
+  .notation {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--mist);
+    font-variant-numeric: tabular-nums;
+  }
+  .notation .bar { text-decoration: overline; text-decoration-thickness: 1px; }
+  .notation .q { color: var(--lamp); }
+
+  form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem; }
+  form label { font-size: 0.875rem; color: var(--mist); }
+  .row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  input {
+    flex: 1 1 9rem;
+    min-width: 0;
+    font: inherit;
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--paper);
+    background: var(--night);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 0.55rem 0.9rem;
+    font-variant-numeric: tabular-nums;
+    transition: border-color 0.2s;
+  }
+  input::placeholder { color: #4b5366; }
+  input:focus { outline: none; border-color: var(--lamp); box-shadow: 0 0 0 3px rgba(224, 176, 106, 0.18); }
+  button {
+    flex: 0 0 auto;
+    font: inherit;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    background: var(--lamp);
+    border: 1px solid var(--lamp);
+    border-radius: 2px;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  button:hover { background: #ecc283; }
+  button:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
+  button:disabled { opacity: 0.6; cursor: progress; }
+  .msg { margin: 0; min-height: 1.6em; font-size: 0.95rem; color: var(--mist); }
+  .msg.is-wrong { color: var(--wrong); }
+  .shake { animation: shake 0.4s; }
+  @keyframes shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+
+  /* Reveal */
+  .reveal { width: 100%; max-width: 60rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  .loading { width: 100%; max-width: 34rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+  .loading p { margin: 0; }
+  .loading .title { font-family: var(--display); font-style: italic; font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1.2; }
+  .track { height: 2px; background: var(--line); overflow: hidden; }
+  .track i { display: block; height: 100%; width: 0%; background: var(--lamp); transition: width 0.25s ease-out; }
+  .pct { font-size: 0.875rem; color: var(--mist); font-variant-numeric: tabular-nums; }
+  video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    display: block;
+    border: 1px solid var(--line);
+  }
+  .fade-in { animation: fade 0.9s ease-out; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shake, .fade-in { animation: none; }
+    .track i, input, button { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="gate" id="gate">
+  <header class="head">
+    <p class="eyebrow">Riservato a</p>
+    <h1>Giorgia Ponti</h1>
+    <p class="lede">Questo video è dedicato soltanto a Giorgia Ponti. Per questo solo tu puoi risolvere l'indovinello che lo custodisce.</p>
+  </header>
+
+  <hr class="rule">
+
+  <section class="riddle" aria-labelledby="riddle-label">
+    <p class="label" id="riddle-label">L'indovinello</p>
+    <blockquote>Ho tre numeri interi. La loro media è 10, la mediana è 8 e anche la moda è 8. Qual è il numero più grande?</blockquote>
+    <p class="notation" aria-hidden="true">
+      <span><span class="bar">x</span> = 10</span>
+      <span>Me = 8</span>
+      <span>Mo = 8</span>
+      <span>max = <span class="q">?</span></span>
+    </p>
+
+    <form id="lock" autocomplete="off" novalidate>
+      <label for="answer">La tua risposta</label>
+      <div class="row">
+        <input id="answer" name="answer" type="text" inputmode="numeric" autocapitalize="off" spellcheck="false" placeholder="—" aria-describedby="msg">
+        <button id="open" type="submit">Apri il video</button>
+      </div>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<section class="reveal" id="reveal" hidden>
+  <div class="loading" id="loading">
+    <p class="title">Giusto. Sto aprendo il video…</p>
+    <div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="track"><i id="fill"></i></div>
+    <p class="pct" id="pct">0%</p>
+  </div>
+  <video id="film" controls playsinline preload="auto" hidden></video>
+</section>
+
+<script>
+(() => {
+  const LOCK = {"salt": "w2X7ASpbDZsZ92nzM5cKGw==", "iter": 250000, "m": "7LFjlJ2klI2RYjTYMiEIonhAP/5VV1pF/gGdSNf3bHTXaqPzXrMZvrDuHGPtC2S0u+dX5lmIz+APC5ncVC3gWT2TnNz4JTBywK7tpkNh93Q1Y5OiNDRk7RNyCxcYLNnS1ENRIjkTWLG+A91QT9eMpylhRY/VAf3j8uukzCTLTdoxvduVxctu9LXW/Rho0xE0zmrcqUTnxJ8a+6NxS1g7oDmqL7D568YPMpW5lGOeJFpD8LXFk0wl6nQ/35Qq5g4A4m3/GNQu5lOF0SGVyl0N8v6daL4zuHOwClZtZLdtfcVbwtzhprXwBu5p277jUreL19vFGBNJmUqcAFaCGJAV"};
+
+  const $ = (id) => document.getElementById(id);
+  const form = $("lock"), input = $("answer"), btn = $("open"), msg = $("msg");
+  const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+
+  function normalize(v) {
+    v = v.trim().toLowerCase().replace(/\s+/g, "");
+    if (v === "quattordici") return "14";
+    const n = v.replace(",", ".");
+    if (/^\+?\d+(\.0+)?$/.test(n)) return String(parseInt(n, 10));
+    return v;
+  }
+
+  async function deriveKey(pw) {
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+    return crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: b64(LOCK.salt), iterations: LOCK.iter, hash: "SHA-256" },
+      base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]
+    );
+  }
+  const decrypt = (key, bytes) =>
+    crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes.subarray(0, 12) }, key, bytes.subarray(12));
+
+  function setProgress(done, total) {
+    const p = Math.min(100, Math.round((done / total) * 100));
+    $("fill").style.width = p + "%";
+    $("pct").textContent = p + "%";
+    $("track").setAttribute("aria-valuenow", String(p));
+  }
+
+  async function fetchPart(part, onBytes) {
+    const res = await fetch(part.f);
+    if (!res.ok) throw new Error("http " + res.status);
+    if (!res.body || !res.body.getReader) {
+      const buf = new Uint8Array(await res.arrayBuffer());
+      onBytes(buf.length);
+      return buf;
+    }
+    const out = new Uint8Array(part.n);
+    const reader = res.body.getReader();
+    let off = 0;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      out.set(value, off);
+      off += value.length;
+      onBytes(value.length);
+    }
+    return out.subarray(0, off);
+  }
+
+  async function openFilm(key, manifest) {
+    $("gate").hidden = true;
+    const reveal = $("reveal");
+    reveal.hidden = false;
+    reveal.classList.add("fade-in");
+    let got = 0;
+    const chunks = [];
+    for (const part of manifest.parts) {
+      const enc = await fetchPart(part, (n) => { got += n; setProgress(got, manifest.total); });
+      chunks.push(await decrypt(key, enc));
+    }
+    setProgress(1, 1);
+    const film = $("film");
+    film.src = URL.createObjectURL(new Blob(chunks, { type: manifest.type }));
+    $("loading").hidden = true;
+    film.hidden = false;
+    film.classList.add("fade-in");
+    film.play().catch(() => {});
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const raw = input.value;
+    if (!raw.trim()) { input.focus(); return; }
+    if (!window.crypto || !crypto.subtle) {
+      msg.className = "msg is-wrong";
+      msg.textContent = "Questo browser non riesce ad aprire il video. Prova con Safari o Chrome aggiornati.";
+      return;
+    }
+    btn.disabled = true;
+    msg.className = "msg";
+    msg.textContent = "Controllo…";
+    let key, manifest;
+    try {
+      key = await deriveKey(normalize(raw));
+      manifest = JSON.parse(new TextDecoder().decode(await decrypt(key, b64(LOCK.m))));
+    } catch (err) {
+      btn.disabled = false;
+      msg.className = "msg is-wrong";
+      msg.textContent = "Non è questo il numero. Riprova.";
+      input.classList.remove("shake");
+      void input.offsetWidth;
+      input.classList.add("shake");
+      input.select();
+      return;
+    }
+    try {
+      await openFilm(key, manifest);
+    } catch (err) {
+      $("loading").querySelector(".title").textContent = "Il video non si è caricato. Controlla la connessione e ricarica la pagina.";
+      $("pct").textContent = "";
+    }
+  });
+})();
+</script>
+</body>
+</html>
